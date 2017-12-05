@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SNT Migration</title>
+</head>
+<body>
+  <h1>Tiendas migradas</h1>
+  <ul class="tiendas">
+    <% for(var i=0; i<tiendas.length; i++) {%>
+      <li class="tienda">
+        <span><%= tiendas[i].number %></span>
+        <span><%= tiendas[i].name %></span>
+        <span></span>
+      </li>
+    <% } %>
+  </ul>
+  <form action="/tienda" method="POST">
+    <h2>Añadir tienda</h2>
+    <input type="text" placeholder="Número" name="number">
+    <input type="text" placeholder="Nombre" name="name">
+    <button type="submit">Enviar</button>
+  </form>
+</body>
+</html>
