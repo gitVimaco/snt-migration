@@ -4,16 +4,19 @@
   "description": "Service to know if a store has its SNT migrated",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon server.js"
+    "test": "mocha test",
+    "dev": "nodemon server.js",
+    "start": "node server.js"
   },
   "author": "Víctor Márquez",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.2",
+    "chai": "^4.1.2",
     "ejs": "^2.5.7",
     "express": "^4.16.2",
-    "mongodb": "^2.2.33"
+    "mongodb": "^2.2.33",
+    "request": "^2.83.0"
   },
   "devDependencies": {
     "nodemon": "^1.12.1"
