@@ -48,7 +48,7 @@ app.set('view engine', 'ejs')
 
 var db
 
-MongoClient.connect(db_link, (err, database) => {
+MongoClient.connect(mongoURL, (err, database) => {
   if (err) return console.log(err)
   db = database
   app.listen(port, () => {
