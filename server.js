@@ -18,6 +18,13 @@ if (mongoURL == null && process.env.DATABASE_SERVICE_NAME) {
       mongoPassword = process.env[mongoServiceName + '_PASSWORD'],
       mongoUser = process.env[mongoServiceName + '_USER']
 
+  console.log('mongoServiceName : ' + mongoServiceName)
+  console.log('mongoHost :        ' + mongoHost)
+  console.log('mongoPort :        ' + mongoPort)
+  console.log('mongoDatabase :    ' + mongoDatabase)
+  console.log('mongoUser :        ' + mongoUser)
+  console.log('mongoPassword :    ' + mongoPassword)
+
   if (mongoHost && mongoPort && mongoDatabase) {
     mongoURLLabel = mongoURL = 'mongodb://'
     if (mongoUser && mongoPassword) {
