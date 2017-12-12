@@ -34,10 +34,14 @@ if (mongoURL == null && process.env.DATABASE_SERVICE_NAME) {
     mongoURLLabel += mongoHost + ':' + mongoPort + '/' + mongoDatabase
     mongoURL += mongoHost + ':' +  mongoPort + '/' + mongoDatabase
 
-    console.log('Pasa por aqui, mongoURL' + mongoURL)
+    console.log('Pasa por aqui, mongoURL : ' + mongoURL)
   }
 }
-if (mongoURL == null) mongoURL = db_link
+if (mongoURL == null) {
+  console.log('Pasa por aqui y no deberia 1, mongoURL : ' + mongoURL)
+  mongoURL = db_link
+  console.log('Pasa por aqui y no deberia 2, mongoURL : ' + mongoURL)
+}
 
 app.use(bodyParser.urlencoded({extended: true}))
 app.set('view engine', 'ejs')
